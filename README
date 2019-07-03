@@ -1,0 +1,5 @@
+## How to repro
+
+1. Open SampleGomobile.xcodeproj in Xcode.app
+2. (fix the potential signing setup)
+3. Hit cmd+B to compile the project
