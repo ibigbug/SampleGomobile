@@ -1,0 +1,8 @@
+framework module "SampleGoLib" {
+	header "ref.h"
+    header "SampleGoLib.objc.h"
+    header "Universe.objc.h"
+    header "SampleGoLib.h"
+
+    export *
+}

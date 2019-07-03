@@ -13,7 +13,23 @@
 		42F6D03922CD6807009DF018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F6D03822CD6807009DF018 /* Assets.xcassets */; };
 		42F6D03C22CD6807009DF018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F6D03B22CD6807009DF018 /* Preview Assets.xcassets */; };
 		42F6D03F22CD6807009DF018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F6D03D22CD6807009DF018 /* LaunchScreen.storyboard */; };
+		42F6D04822CD68C7009DF018 /* SampleGoLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F6D04722CD68C7009DF018 /* SampleGoLib.framework */; };
+		42F6D04922CD68C7009DF018 /* SampleGoLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F6D04722CD68C7009DF018 /* SampleGoLib.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42F6D04A22CD68C7009DF018 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42F6D04922CD68C7009DF018 /* SampleGoLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		42F6D02F22CD6803009DF018 /* SampleGomobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleGomobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		42F6D03B22CD6807009DF018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42F6D03E22CD6807009DF018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F6D04022CD6807009DF018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F6D04722CD68C7009DF018 /* SampleGoLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleGoLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F6D04822CD68C7009DF018 /* SampleGoLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				42F6D03122CD6803009DF018 /* SampleGomobile */,
 				42F6D03022CD6803009DF018 /* Products */,
+				42F6D04622CD68C6009DF018 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		42F6D04622CD68C6009DF018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42F6D04722CD68C7009DF018 /* SampleGoLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +112,7 @@
 				42F6D02B22CD6803009DF018 /* Sources */,
 				42F6D02C22CD6803009DF018 /* Frameworks */,
 				42F6D02D22CD6803009DF018 /* Resources */,
+				42F6D04A22CD68C7009DF018 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,9 +312,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SampleGomobile/Preview\\ Content";
+				DEVELOPMENT_TEAM = A4HU2V65N5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SampleGomobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.SampleGomobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,9 +338,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SampleGomobile/Preview\\ Content";
+				DEVELOPMENT_TEAM = A4HU2V65N5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SampleGomobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.SampleGomobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
